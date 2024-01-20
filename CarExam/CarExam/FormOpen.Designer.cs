@@ -30,12 +30,12 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.autókToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.újToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.módosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.törölToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.listBoxAutok = new System.Windows.Forms.ListBox();
             this.panelAutoMarkak = new System.Windows.Forms.Panel();
+            this.újToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.felveszToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.törölToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,30 +54,11 @@
             // 
             this.autókToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.újToolStripMenuItem,
-            this.módosToolStripMenuItem,
+            this.felveszToolStripMenuItem,
             this.törölToolStripMenuItem});
             this.autókToolStripMenuItem.Name = "autókToolStripMenuItem";
             this.autókToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
             this.autókToolStripMenuItem.Text = "Autók";
-            // 
-            // újToolStripMenuItem
-            // 
-            this.újToolStripMenuItem.Name = "újToolStripMenuItem";
-            this.újToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
-            this.újToolStripMenuItem.Text = "Új";
-            // 
-            // módosToolStripMenuItem
-            // 
-            this.módosToolStripMenuItem.Name = "módosToolStripMenuItem";
-            this.módosToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
-            this.módosToolStripMenuItem.Text = "Módosít";
-            this.módosToolStripMenuItem.Click += new System.EventHandler(this.módosToolStripMenuItem_Click);
-            // 
-            // törölToolStripMenuItem
-            // 
-            this.törölToolStripMenuItem.Name = "törölToolStripMenuItem";
-            this.törölToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
-            this.törölToolStripMenuItem.Text = "Töröl";
             // 
             // listBox1
             // 
@@ -107,6 +88,24 @@
             this.panelAutoMarkak.Size = new System.Drawing.Size(200, 422);
             this.panelAutoMarkak.TabIndex = 3;
             // 
+            // újToolStripMenuItem
+            // 
+            this.újToolStripMenuItem.Name = "újToolStripMenuItem";
+            this.újToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.újToolStripMenuItem.Text = "Új";
+            // 
+            // felveszToolStripMenuItem
+            // 
+            this.felveszToolStripMenuItem.Name = "felveszToolStripMenuItem";
+            this.felveszToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.felveszToolStripMenuItem.Text = "Felvesz";
+            // 
+            // törölToolStripMenuItem
+            // 
+            this.törölToolStripMenuItem.Name = "törölToolStripMenuItem";
+            this.törölToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.törölToolStripMenuItem.Text = "Töröl";
+            // 
             // FormOpen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -131,12 +130,12 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem autókToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem újToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem módosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem törölToolStripMenuItem;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ListBox listBoxAutok;
         private System.Windows.Forms.Panel panelAutoMarkak;
+        private System.Windows.Forms.ToolStripMenuItem újToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem felveszToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem törölToolStripMenuItem;
     }
 }
 

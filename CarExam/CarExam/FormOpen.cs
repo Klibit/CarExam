@@ -53,11 +53,6 @@ namespace CarExam
                 }
             }
         }
-        private void módosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
