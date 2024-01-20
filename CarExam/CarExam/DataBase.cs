@@ -65,12 +65,14 @@ namespace CarExam
                         string marka = dataReader.GetString("marka");
                         string modell = dataReader.GetString("modell");
                         int gyartasiEv = dataReader.GetInt32("gyartasiEv");
-                        string forgalmiErvenyesseg = dataReader.GetString("forgalmiervenyesseg");
+                        DateTime forgalmiErvenyesseg = dataReader.GetDateTime("forgalmiervenyesseg");
                         int vetelAr = dataReader.GetInt32("vetelAr");
                         int kmAllas = dataReader.GetInt32("kmAllas");
-                        int hengerUrtartalom = dataReader.GetInt32("hengerurtartalom");
+                        int hengerUrtartalom = dataReader.GetInt32("hengerűrtartalom");
                         int tomeg = dataReader.GetInt32("tomeg");
                         int teljesitmeny = dataReader.GetInt32("teljesitmeny");
+                        cars.Add(new Car(rendszam,marka,modell,gyartasiEv, forgalmiErvenyesseg, vetelAr, kmAllas, hengerUrtartalom, tomeg, teljesitmeny));
+                        
                     }
                 }
             }
