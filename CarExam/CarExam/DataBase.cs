@@ -13,7 +13,7 @@ namespace CarExam
     {
         MySqlConnection conn = null;
         MySqlCommand sql = null;
-        DataBase() { 
+        public DataBase() { 
         
         MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder();
             builder.Server = "localhost";
@@ -48,6 +48,42 @@ namespace CarExam
         private void kapcsolatNyit()
         {
             if (conn.State != System.Data.ConnectionState.Open) conn.Open();
+        }
+
+        internal List<Car> getAllCar()
+        {
+            List<Car> cars = new List<Car>();
+            sql.CommandText = "SELECT * FROM `auto` ORDER BY `marka`";
+            try
+            {
+                kapcsolatNyit();
+                using (MySqlDataReader dataReader = sql.ExecuteReader())
+                {
+                    while (dataReader.Read())
+                    {
+                        string rendszam = dataReader.GetString("rendszam");
+                        string marka = dataReader.GetString("marka");
+                        string modell = dataReader.GetString("modell");
+                        int gyartasiEv = dataReader.GetInt32("gyartasiEv");
+                        string forgalmiErvenyesseg = dataReader.GetString("forgalmiervenyesseg");
+                        int vetelAr = dataReader.GetInt32("vetelAr");
+                        int kmAllas = dataReader.GetInt32("kmAllas");
+                        int hengerUrtartalom = dataReader.GetInt32("hengerurtartalom");
+                        int tomeg = dataReader.GetInt32("tomeg");
+                        int teljesitmeny = dataReader.GetInt32("teljesitmeny");
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+                Environment.Exit(0);
+            }
+            finally
+            {
+                kapcsolatZar();
+            }
+            return cars;
         }
     }
 }

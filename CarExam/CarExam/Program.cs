@@ -8,14 +8,14 @@ namespace CarExam
 {
     internal static class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
-        [STAThread]
-        static void Main()
+        public static List<Car> cars = new List<Car>();
+        public static DataBase dataBase = null;
+        public static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            dataBase = new DataBase();
+            cars = dataBase.getAllCar();
             Application.Run(new FormOpen());
         }
     }
