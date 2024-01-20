@@ -98,6 +98,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Car.cs" />
+    <Compile Include="FormDatas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDatas.Designer.cs">
+      <DependentUpon>FormDatas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormOpen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +113,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormDatas.resx">
+      <DependentUpon>FormDatas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormOpen.resx">
       <DependentUpon>FormOpen.cs</DependentUpon>
     </EmbeddedResource>
