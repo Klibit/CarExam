@@ -85,6 +85,7 @@ namespace KonyvtarAsztali
             int publish_year = (int)numericUpDown_PublishDate.Value;
             string title = textBox_Title.Text;
             Konyv ujKony = new Konyv(id, author, publish_year, page_count, title);
+            Program.db.updateKonyv(id, author, page_count, publish_year, title);
             Program.baseForm.listBox1_Konyvek.Items.Add(ujKony);
             this.Close();
 

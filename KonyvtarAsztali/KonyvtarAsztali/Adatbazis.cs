@@ -63,7 +63,20 @@ namespace KonyvtarAsztali
             nyit();
             command.ExecuteNonQuery();
             zar();
+        }
 
+        public void updateKonyv(int id, string author, int pageCount, int publishYear, string title)
+        {
+            command.CommandText = "UPDATE `books` SET `id`='@id',`title`='@title',`author`='@author',`publish_year`='@publish_year',`page_count`='@page_count',`created_at`='@created_at',`updated_at`='@updated_at' WHERE 1`)";
+            command.Parameters.Clear();
+            command.Parameters.AddWithValue("@id", id);
+            command.Parameters.AddWithValue("@author", author);
+            command.Parameters.AddWithValue("@page_count", pageCount);
+            command.Parameters.AddWithValue("@publish_year", publishYear);
+            command.Parameters.AddWithValue("@title", title);
+            nyit();
+            command.ExecuteNonQuery();
+            zar();
         }
 
 
